@@ -37,8 +37,8 @@ local function centrizedText(y, color, text)
 end
 
 local function title()
-	local y = math.floor(screenHeight / 2 - 1)
-	centrizedText(y, 0x2D2D2D, "MineOS")
+	local y = math.floor(screenHeight / 4 - 2)
+	centrizedText(y, 0xFFF44F, "HropicOS")
 
 	return y + 2
 end
@@ -242,7 +242,7 @@ window:addChild(GUI.panel(1, 1, window.width, window.height, 0xE1E1E1))
 
 -- Top menu
 local menu = workspace:addChild(GUI.menu(1, 1, workspace.width, 0xF0F0F0, 0x787878, 0x3366CC, 0xE1E1E1))
-local installerMenu = menu:addContextMenuItem("MineOS", 0x2D2D2D)
+local installerMenu = menu:addContextMenuItem("HromicOS", 0xFFD700)
 
 installerMenu:addItem("🗘", "Reboot").onTouch = function()
 	computer.shutdown(true)
