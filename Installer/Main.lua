@@ -37,7 +37,7 @@ local function centrizedText(y, color, text)
 end
 
 local function title()
-	local y = math.floor(screenHeight / 4 - 2)
+	local y = math.floor(screenHeight / 2.5 - 1.5)
 	centrizedText(y, 0xFFF44F, "HropicOS")
 
 	return y + 2
