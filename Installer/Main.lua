@@ -13,7 +13,7 @@ local EEPROMAddress, internetAddress, GPUAddress =
 component.invoke(GPUAddress, "bind", getComponentAddress("screen"))
 local screenWidth, screenHeight = component.invoke(GPUAddress, "getResolution")
 
-local repositoryURL = "https://raw.githubusercontent.com/linoliumplitkoviy-ux/literate-computing-machine/refs/heads/main/master/"
+local repositoryURL = "https://raw.githubusercontent.com/linoliumplitkoviy-ux/literate-computing-machine/refs/heads/main/"
 local installerURL = "Installer/"
 local EFIURL = "EFI/Minified.lua"
 
