@@ -17,7 +17,7 @@ local repositoryURL = "https://raw.githubusercontent.com/IgorTimofeev/MineOS/mas
 local installerURL = "Installer/"
 local EFIURL = "EFI/Minified.lua"
 
-local installerPath = "/MineOS installer/"
+local installerPath = "/HropicOS/"
 local installerPicturesPath = installerPath .. "Installer/Pictures/"
 local OSPath = "/"
 
