@@ -19,14 +19,14 @@ local EFIURL = "EFI/Minified.lua"
 
 local installerPath = "/HropicOS/"
 local installerPicturesPath = installerPath .. "Installer/Pictures/"
-loal OSPath = "/"
+local OSPath = "/"
 
 local temporaryFilesystemProxy, selectedFilesystemProxy
 
 --------------------------------------------------------------------------------
 
 -- Working with components directly before system libraries are downloaded & initialized
-local funtion centrize(width)
+local function centrize(width)
 	return math.floor(screenWidth / 2 - width / 2)
 end
 
@@ -238,13 +238,13 @@ workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x1E1E1E))
 -- Main installer window
 local window = workspace:addChild(GUI.window(1, 1, 80, 24))
 window.localX, window.localY = math.ceil(workspace.width / 2 - window.width / 2), math.ceil(workspace.height / 2 - window.height / 2)
-window:addChild(GUI.panel(1, 1, window.width, window.height, 0xE1E1E1))
+window:addChild(GUI.panel(1, 1, window.width, window.height, 0xB0C4DE))
 
 -- Top menu
 local menu = workspace:addChild(GUI.menu(1, 1, workspace.width, 0xF0F0F0, 0x787878, 0x3366CC, 0xE1E1E1))
-local installerMenu = menu:addContextMenuItem("HromicOS", 0xFFD700)
+local installerMenu = menu:addContextMenuItem("HromicOS", 0xFFF44F)
 
-installerMenu:addItem("🗘", "Reboot").onTouch = function()
+installerMenu:addItem("⟳", "Reboot").onTouch = function()
 	computer.shutdown(true)
 end
 
