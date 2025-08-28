@@ -13,20 +13,20 @@ local EEPROMAddress, internetAddress, GPUAddress =
 component.invoke(GPUAddress, "bind", getComponentAddress("screen"))
 local screenWidth, screenHeight = component.invoke(GPUAddress, "getResolution")
 
-local repositoryURL = "https://raw.githubusercontent.com/IgorTimofeev/MineOS/master/"
+local repositoryURL = "https://raw.githubusercontent.com/linoliumplitkoviy-ux/literate-computing-machine/refs/heads/main/master/"
 local installerURL = "Installer/"
 local EFIURL = "EFI/Minified.lua"
 
 local installerPath = "/HropicOS/"
 local installerPicturesPath = installerPath .. "Installer/Pictures/"
-local OSPath = "/"
+loal OSPath = "/"
 
 local temporaryFilesystemProxy, selectedFilesystemProxy
 
 --------------------------------------------------------------------------------
 
 -- Working with components directly before system libraries are downloaded & initialized
-local function centrize(width)
+local funtion centrize(width)
 	return math.floor(screenWidth / 2 - width / 2)
 end
 
@@ -543,7 +543,7 @@ addStage(function()
 
 	-- Renaming if possible
 	if not selectedFilesystemProxy.getLabel() then
-		selectedFilesystemProxy.setLabel("MineOS HDD")
+		selectedFilesystemProxy.setLabel("HropicOS HDD")
 	end
 
 	local function switchProxy(runnable)
@@ -656,7 +656,7 @@ addStage(function()
 	workspace:draw()
 	
 	component.invoke(EEPROMAddress, "set", request(EFIURL))
-	component.invoke(EEPROMAddress, "setLabel", "MineOS EFI")
+	component.invoke(EEPROMAddress, "setLabel", "HropicOS EFI")
 	component.invoke(EEPROMAddress, "setData", selectedFilesystemProxy.address)
 
 
